@@ -6,22 +6,26 @@ Harl::Harl(void){}
 
 void	Harl::debug(void)
 {
-	std::cout <<"This is obviously DEBUGGING\n";
+	std::cout << "[ DEBUG ]\n";
+	std::cout <<"This is obviously DEBUGGING\n\n";
 }
 
 void	Harl::info(void)
 {
-	std::cout <<"This is obviously INFO\n";
+	std::cout << "[ INFO ]\n";
+	std::cout <<"This is obviously INFO\n\n";
 }
 
 void	Harl::warning(void)
 {
-	std::cout <<"This is obviously WARNING\n";
+	std::cout << "[ WARNING ]\n";
+	std::cout <<"This is obviously WARNING\n\n";
 }
 
 void	Harl::error(void)
 {
-	std::cout <<"This is obviously ERROR\n";
+	std::cout << "[ ERROR ]\n";
+	std::cout <<"This is obviously ERROR\n\n";
 }
 
 void	Harl::complain(std::string level)
@@ -34,9 +38,19 @@ void	Harl::complain(std::string level)
 	{
 		if (ref[index] == level)
 		{
-	 		(this->*funcs[index])();
+			switch (index) {
+			case 0:
+				(this->*funcs[0])();
+			case 1:
+				(this->*funcs[1])();
+			case 2:
+				(this->*funcs[2])();
+			case 3:
+				(this->*funcs[3])();
+			}
 			return ;
 		}
 	}
-	std::cerr << "command not found, can not complain\n";
+	std::cout << "[ BLABLA ]\n";
+	std::cerr << "no match, can not complain\n\n";
 }
