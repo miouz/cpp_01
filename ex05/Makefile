@@ -1,4 +1,4 @@
-NAME := Harl
+NAME := harl
 
 # ============================================================================ #
 #                               COMPILOR & FLAGS                                  #
@@ -6,7 +6,7 @@ NAME := Harl
 
 MAKE_CMD ?= $(MAKE)
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -g3 -fsanitize=address
+CXXFLAGS := -Wall -Wextra -Werror
 CXXFLAGS += -std=c++98
 
 # ============================================================================ #
