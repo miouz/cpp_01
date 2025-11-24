@@ -1,17 +1,21 @@
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 #include <iostream>
+#include <cstdlib>
 
 HumanB::HumanB(std::string name)
 {
 	this->name = name;
-	weapon = nullptr;
+	weapon = NULL;
 }
+
+HumanB::~HumanB(void){}
 
 void	HumanB::setWeapon(Weapon& weapon)
 {
 	this->weapon = &weapon;
 }
+
 void	HumanB::attack()
 {
 	if (weapon)
