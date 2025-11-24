@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <cstdlib>
 
 Sed::Sed( std::string &toReplace, std::string& replaceWith, std::string& fileName):
 toReplace_(toReplace), replaceWith_(replaceWith)
@@ -11,8 +12,8 @@ toReplace_(toReplace), replaceWith_(replaceWith)
 		std::cerr << "can't accept empty string\n";
 		exit(EXIT_FAILURE);
 	}
-	inFile_.open(fileName, std::ifstream::in);
-	outFile_.open(fileName + ".replace", std::ofstream::binary | std::ofstream::out);
+	inFile_.open(fileName.c_str(), std::ifstream::in);
+	outFile_.open((fileName + ".replace").c_str(), std::ofstream::binary | std::ofstream::out);
 	if (!inFile_.is_open() || !outFile_.is_open())
 		std::cerr << "can't open file\n";
 }
