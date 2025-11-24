@@ -1,4 +1,5 @@
 #include "Zombie.hpp"
+#include <cstdlib>
 
 void	creatStackZombie()
 {
@@ -14,7 +15,7 @@ void	creatHeapZombie(Zombie** ptr)
 
 int	main(void)
 {
-	Zombie*	heapZombie = nullptr;
+	Zombie*	heapZombie = NULL;
 
 	//test for verifing stack zombie;
 	creatStackZombie();
