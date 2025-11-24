@@ -6,7 +6,7 @@ NAME := zombieHorde
 
 MAKE_CMD ?= $(MAKE)
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
+CXXFLAGS := -Wall -Wextra -Werror
 CXXFLAGS += -std=c++98
 
 # ============================================================================ #
